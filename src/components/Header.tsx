@@ -77,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* GitHub 仓库跳转与 Star 按钮 */}
           <a
-            href="https://github.com/zjq-22-12-25/LLMtoWord"
+            href="https://github.com/R1ot-22-12-25/LLMtoWord"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-800 bg-slate-50 hover:bg-slate-100 hover:text-blue-600 transition-all border border-slate-300 shadow-2xs group"

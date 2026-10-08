@@ -21,7 +21,7 @@ export const ErrorReportModal: React.FC<ErrorReportModalProps> = ({
   if (!isOpen) return null;
 
   const DEVELOPER_EMAIL = '203802829@qq.com';
-  const GITHUB_REPO_URL = 'https://github.com/zjq-22-12-25/LLMtoWord';
+  const GITHUB_REPO_URL = 'https://github.com/R1ot-22-12-25/LLMtoWord';
 
   const reportPayload = {
     latex: currentLatex || '（未输入公式）',
