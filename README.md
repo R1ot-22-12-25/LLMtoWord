@@ -7,9 +7,13 @@
   <img src="https://img.shields.io/badge/React-19-blue.svg?logo=react" alt="React 19" />
   <img src="https://img.shields.io/badge/TypeScript-5.9-blue.svg?logo=typescript" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Office_Word-2016~365%20%7C%20WPS-2b579a.svg?logo=microsoftword" alt="Word" />
-  <img src="https://img.shields.io/badge/Tests-33%20Passed%20(100%25)-success.svg" alt="Tests" />
+  <img src="https://img.shields.io/badge/Tests-36%20Passed%20(100%25)-success.svg" alt="Tests" />
   <img src="https://img.shields.io/badge/Privacy-100%25%20Local%20Client-emerald.svg" alt="Privacy" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" />
+</p>
+
+<p align="center">
+  <a href="./README.md"><b>简体中文</b></a> · <a href="./README_EN.md">English</a>
 </p>
 
 ---
