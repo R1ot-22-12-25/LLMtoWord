@@ -4,6 +4,8 @@
  * Word 2016、2019、2021、Office 365 及 WPS 会自动将标准 MathML 解析为原生可编辑公式对象
  */
 
+import { MathMLOptimizer } from './mathmlOptimizer';
+
 export class WordClipboard {
   /**
    * 一键复制到 Word 剪贴板
@@ -16,8 +18,11 @@ export class WordClipboard {
       targetPayload = _omml.trim();
     }
 
-    if (targetPayload.startsWith('<math') && !targetPayload.includes('xmlns=')) {
-      targetPayload = targetPayload.replace('<math', '<math xmlns="http://www.w3.org/1998/Math/MathML"');
+    if (targetPayload.startsWith('<math')) {
+      if (!targetPayload.includes('xmlns=')) {
+        targetPayload = targetPayload.replace('<math', '<math xmlns="http://www.w3.org/1998/Math/MathML"');
+      }
+      targetPayload = MathMLOptimizer.optimize(targetPayload);
     }
 
     // 1. 优先使用 navigator.clipboard.writeText 写入纯净的 MathML

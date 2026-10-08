@@ -5,6 +5,7 @@ import { LatexCleaner } from '../parser/latexCleaner';
 import { LatexValidator } from '../parser/latexValidator';
 import { XsltEngine } from './xsltEngine';
 import { PureJsOmmlConverter } from './pureJsOmml';
+import { MathMLOptimizer } from './mathmlOptimizer';
 import { WordClipboard } from './wordClipboard';
 
 /**
@@ -113,6 +114,9 @@ export class FormulaConverterEngine {
       if (!mathml.includes('xmlns="http://www.w3.org/1998/Math/MathML"')) {
         mathml = mathml.replace(/<math([^>]*)>/, '<math xmlns="http://www.w3.org/1998/Math/MathML"$1>');
       }
+
+      // 针对 Word 进行 MathML 增强优化 (修复重音符号 m:acc 与积分被积表达式封装 m:nary，消除 Word 虚线占位方框)
+      mathml = MathMLOptimizer.optimize(mathml);
 
       // 4. MathML 转换为 OMML (双引擎架构)
       let omml = '';
