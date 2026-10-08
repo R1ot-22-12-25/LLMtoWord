@@ -20,7 +20,7 @@ export const ErrorReportModal: React.FC<ErrorReportModalProps> = ({
 
   if (!isOpen) return null;
 
-  const DEVELOPER_EMAIL = 'zhangjiaqi@stu.sau.edu.cn';
+  const DEVELOPER_EMAIL = '203802829@qq.com';
   const GITHUB_REPO_URL = 'https://github.com/zjq-22-12-25/LLMtoWord';
 
   const reportPayload = {
