@@ -1,0 +1,5 @@
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-multipart>=0.0.9
+pillow>=10.2.0
+pix2tex[gui]>=0.1.1
