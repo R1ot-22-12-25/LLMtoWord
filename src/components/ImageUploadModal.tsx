@@ -249,9 +249,15 @@ export const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
                   已连接 <code>127.0.0.1:8000</code>，模型: <strong>{localStatus.model || 'LaTeX-OCR (pix2tex)'}</strong>。纯本地推理，无需联网，速度约 0.2s！
                 </p>
               ) : (
-                <div className="space-y-1 text-[11px] text-amber-800">
-                  <p className="m-0">
-                    一键启动方式：双击运行项目中的 <code>backend/start.bat</code>（或执行 <code>python backend/app.py</code>）。
+                <div className="space-y-1.5 text-[11px] text-amber-900">
+                  <p className="m-0 font-medium">
+                    本地离线模型专为需要<strong> 100% 隐私保密、断网免 Token </strong>的重度科研用户设计。
+                  </p>
+                  <p className="m-0 text-amber-800">
+                    👉 <strong>不想下载项目的在线访客</strong>：请直接切换至上方 <button onClick={() => setEngineType('cloud')} className="text-blue-700 underline font-bold cursor-pointer">【云端多模态 (Qwen-VL)】</button>（填入免费 Key 即可直接在线识图）或 <button onClick={() => setEngineType('mock')} className="text-blue-700 underline font-bold cursor-pointer">【内置示例】</button> 免配置快速体验！
+                  </p>
+                  <p className="m-0 text-amber-700">
+                    👉 <strong>本地离线启动</strong>：下载 GitHub 项目后双击 <code>backend/start.bat</code> 即可一键拉起。
                   </p>
                 </div>
               )}
