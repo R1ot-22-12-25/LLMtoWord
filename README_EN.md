@@ -124,16 +124,19 @@ The service listens on `http://127.0.0.1:8000`. The web app automatically probes
 
 ---
 
-## 💼 Resume & Interview Highlights
+## 🔬 Technical Innovations & Engineering Highlights
 
-If you showcase this project on your resume, here are the key architectural talking points:
+LLMtoWord is engineered to solve complex interoperability and rendering challenges across platforms:
 
 1. **Deep Office Clipboard Protocol Reverse-Engineering**:  
-   Analyzed Microsoft Word's HTML import sanitization rules, overcoming the pitfall where Word stripped `<m:oMath>` tags into flat text, and achieved seamless native Office Math generation via MathML MIME payload injection.
+   - Analyzed Word and WPS clipboard parsing pipelines, eliminating the issue where Word's HTML sanitizer stripped mathematical markup into plain text.
+   - Built a dedicated `MathMLOptimizer` compatibility layer that fixes native Word quirks, such as floating diacritic accents (`m:acc` vs `m:limUpp`) and dotted placeholder boxes (`⬚`) caused by empty operands in n-ary integral operators.
 2. **Hybrid Cloud/Edge Multimodal Vision Architecture**:  
-   Designed a pluggable vision adapter pattern supporting cloud vision LLMs and a lightweight ONNX CPU local microservice with real-time health-checking and graceful fallbacks.
-3. **Fault-Tolerant Math Reconstruction Pipeline**:  
-   Addressed the 2D $\to$ 1D dimensionality reduction loss from PDF text selection by developing heuristic grammatical pattern reconstructors, eliminating invisible zero-width character (`\u200B`) corruptions.
+   - Implemented a unified Strategy Pattern for vision inference, decoupling UI components from backend engines.
+   - Supports both cloud multimodal vision LLMs (Qwen-VL) and a lightweight ONNX CPU-optimized local Sidecar (~110MB weights, ~0.2s CPU inference, 100% offline & privacy-safe).
+3. **Fault-Tolerant Math Reconstruction & De-noising Pipeline**:  
+   - Formulated a heuristic multi-line syntax reconstructor to recover 2D math structures (fractions, sub/superscripts) broken by 1D PDF text copying.
+   - Globally purges invisible zero-width characters (e.g. `\u200B`) and normalizes irregular Unicode notations to guarantee parser stability.
 
 ---
 
